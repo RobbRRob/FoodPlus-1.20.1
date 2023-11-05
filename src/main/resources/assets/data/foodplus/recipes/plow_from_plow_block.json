@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "%  ",
+    "@@@",
+    " ##"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:iron_ingot"
+    },
+    "@": {
+      "item": "minecraft:planks"
+    },
+    "%": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "foodplus:plow",
+    "count": 1
+  }
+}
