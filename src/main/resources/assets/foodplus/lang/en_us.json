@@ -1,3 +1,7 @@
 {
-  "item.foodplus.onion": "Onion"
+  "item.foodplus.onion": "Onion",
+
+  "block.foodplus.plow": "Plow",
+
+  "creativetab.foodplus_tab": "Food plus tab"
 }
