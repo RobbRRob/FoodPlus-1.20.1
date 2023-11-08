@@ -4,11 +4,11 @@
 
 - Get recipes by looting structures or fishing
 - Food can give you effects
-- use different utensils to cook (coldron to simmer), iron plate for cooking
+- use different utensils to cook (cauldron to simmer), iron plate for cooking
 
 ## Added items
 
-### Ingrediens
+### Ingredients
 
 #### Fruit
 
@@ -23,6 +23,8 @@
 #### Mushroom
 
 - sulphur shelf
+- lion's mane
+- enoki
 
 #### Berries
 
@@ -35,18 +37,21 @@
 - onions
 - garlic
 - tomatoes
+- sugar beet
 
 #### product
 
 - butter
+- chocolate
 
 ### Tools
 
-- hoes can right click farm
-- cuttery knife
+- sickle (more crop drop, right-click harvest)
+- cutlery knife (cut things like diced onions)
 
 ### Blocks
 
 - plow
 - cooking stove
-- brewry
+- brewery (wine, beer, met, vodka)
+- mill (flour, sugar)
