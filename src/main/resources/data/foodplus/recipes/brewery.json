@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "Y": {
+      "item": "minecraft:copper_ingot"
+    },
+    "#": {
+      "item": "minecraft:campfire"
+    },
+    "X": {
+      "item": "minecraft:cauldron"
+    }
+  },
+  "pattern": [
+    "YYY",
+    "YXY",
+    "Y#Y"
+  ],
+  "result": {
+    "item": "foodplus:brewery"
+  }
+}
