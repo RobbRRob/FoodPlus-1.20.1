@@ -19,6 +19,8 @@
 - cherries
 - orange
 - strawberries
+- dragon fruit
+- pineapple
 
 #### Mushroom
 
@@ -55,3 +57,6 @@
 - cooking stove
 - brewery (wine, beer, met, vodka)
 - mill (flour, sugar)
+
+## Program info
+The build up of the mod is achived by following [this guide by Kaupenjoe](https://youtu.be/TPfNvwfgXAU).

@@ -21,6 +21,8 @@ public class ModCreativeModeTab {
                         pOutput.accept(ModItems.ONION.get());
 
                         pOutput.accept(ModBlocks.PLOW.get());
+
+                        pOutput.accept(ModItems.SICKLE.get());
                     })
                     .build());
 
