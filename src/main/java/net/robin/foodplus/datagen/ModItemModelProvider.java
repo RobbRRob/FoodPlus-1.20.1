@@ -17,7 +17,14 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+        // Food
         simpleItem(ModItems.ONION);
+        simpleItem(ModItems.DRAGON_FRUIT);
+
+        // Ingredients
+        simpleItem(ModItems.SUNFLOWER_OIL);
+
+        // Tools
         simpleItem(ModItems.SICKLE);
     }
 

@@ -18,11 +18,18 @@ public class ModCreativeModeTab {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.ONION.get()))
                     .title(Component.translatable("creativetab.foodplus_tab"))
                     .displayItems((pParameters, pOutput) -> {
+                        // Food
                         pOutput.accept(ModItems.ONION.get());
+                        pOutput.accept(ModItems.DRAGON_FRUIT.get());
 
+                        // Ingredients
+                        pOutput.accept(ModItems.SUNFLOWER_OIL.get());
+
+                        // Utility blocks
                         pOutput.accept(ModBlocks.PLOW.get());
                         pOutput.accept(ModBlocks.BREWERY.get());
 
+                        // Tools
                         pOutput.accept(ModItems.SICKLE.get());
                     })
                     .build());
