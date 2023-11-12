@@ -21,12 +21,14 @@
 - strawberries
 - dragon fruit
 - pineapple
+- coconut
 
 #### Mushroom
 
 - sulphur shelf
 - lion's mane
 - enoki
+- truffles
 
 #### Berries
 

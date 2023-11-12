@@ -13,7 +13,7 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, FoodPlus.MOD_ID);
 
     public static final RegistryObject<Item> ONION = ITEMS.register("onion",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().food(ModFoods.ONION)));
 
     public static final RegistryObject<Item> SICKLE = ITEMS.register("sickle",
             () -> new SickleItem(new Item.Properties().durability(100)));
