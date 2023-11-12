@@ -11,8 +11,8 @@ import net.robin.foodplus.FoodPlus;
 import net.robin.foodplus.item.ModItems;
 
 public class ModItemModelProvider extends ItemModelProvider {
-    public ModItemModelProvider(PackOutput output, String modid, ExistingFileHelper existingFileHelper) {
-        super(output, modid, existingFileHelper);
+    public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
+        super(output, FoodPlus.MOD_ID, existingFileHelper);
     }
 
     @Override

@@ -10,8 +10,7 @@ import net.robin.foodplus.FoodPlus;
 
 public class ModTags {
     public static class Blocks {
-        public static final TagKey<Block> HARVESTABLES = tag("harvestables");
-
+        public static final TagKey<Block> HARVESTABLE_WITH_SICKLE = tag("harvestable_with_sickle");
         private static TagKey<Block> tag(String name) {
             return BlockTags.create(new ResourceLocation(FoodPlus.MOD_ID, name));
         }

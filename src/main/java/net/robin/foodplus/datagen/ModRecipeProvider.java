@@ -1,16 +1,16 @@
 package net.robin.foodplus.datagen;
 
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.FinishedRecipe;
-import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeProvider;
-import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
+import net.minecraft.data.recipes.*;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.robin.foodplus.FoodPlus;
+import net.robin.foodplus.block.ModBlocks;
 import net.robin.foodplus.item.ModItems;
 
 import java.util.List;
@@ -26,6 +26,35 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
         // oreBlasting(pWriter, SMELTABLES, RecipeCategory.MISC, ModItems., 0.25f, 100, "");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SICKLE.get())
+                .pattern(" II")
+                .pattern("  I")
+                .pattern(" S ")
+                .define('S', Items.STICK)
+                .define('I', Items.IRON_INGOT)
+                .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BREWERY.get())
+                .pattern("KKK")
+                .pattern("KCK")
+                .pattern("KFK")
+                .define('K', Items.COPPER_INGOT)
+                .define('C', Items.CAULDRON)
+                .define('F', Items.CAMPFIRE)
+                .unlockedBy(getHasName(Items.COPPER_INGOT), has(Items.COPPER_INGOT))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PLOW.get())
+                .pattern("S  ")
+                .pattern("PPP")
+                .pattern(" II")
+                .define('S', Items.STICK)
+                .define('P', ItemTags.PLANKS)
+                .define('I', Items.IRON_INGOT)
+                .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                .save(pWriter);
     }
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {
         oreCooking(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTIme, pGroup, "_from_smelting");

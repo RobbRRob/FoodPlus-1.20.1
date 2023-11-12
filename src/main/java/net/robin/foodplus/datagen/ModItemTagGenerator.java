@@ -14,8 +14,8 @@ import java.util.concurrent.CompletableFuture;
 public class ModItemTagGenerator extends ItemTagsProvider {
 
 
-    public ModItemTagGenerator(PackOutput pOutput, CompletableFuture<HolderLookup.Provider> pLookupProvider, CompletableFuture<TagLookup<Item>> pParentProvider, CompletableFuture<TagLookup<Block>> pBlockTags, @Nullable ExistingFileHelper existingFileHelper) {
-        super(pOutput, pLookupProvider, pParentProvider, pBlockTags, FoodPlus.MOD_ID, existingFileHelper);
+    public ModItemTagGenerator(PackOutput pOutput, CompletableFuture<HolderLookup.Provider> pLookupProvider, CompletableFuture<TagLookup<Block>> pBlockTags, @Nullable ExistingFileHelper existingFileHelper) {
+        super(pOutput, pLookupProvider, pBlockTags, FoodPlus.MOD_ID, existingFileHelper);
     }
 
     @Override

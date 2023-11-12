@@ -7,6 +7,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.robin.foodplus.FoodPlus;
+import net.robin.foodplus.block.ModBlocks;
 import net.robin.foodplus.util.ModTags;
 import org.jetbrains.annotations.Nullable;
 
@@ -20,6 +21,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
-
+        this.tag(ModTags.Blocks.HARVESTABLE_WITH_SICKLE)
+                .add(Blocks.POTATOES, Blocks.CARROTS);
     }
 }
