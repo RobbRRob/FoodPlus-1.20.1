@@ -22,6 +22,6 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
         this.tag(ModTags.Blocks.HARVESTABLE_WITH_SICKLE)
-                .add(Blocks.POTATOES, Blocks.CARROTS);
+                .add(Blocks.POTATOES, Blocks.CARROTS, Blocks.WHEAT, Blocks.BEETROOTS);
     }
 }

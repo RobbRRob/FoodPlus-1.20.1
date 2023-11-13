@@ -22,6 +22,7 @@
 - dragon fruit
 - pineapple
 - coconut
+- lemon
 
 #### Mushroom
 

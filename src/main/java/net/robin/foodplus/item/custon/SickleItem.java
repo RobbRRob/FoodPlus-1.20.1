@@ -27,6 +27,6 @@ public class SickleItem extends Item {
         pContext.getItemInHand().hurtAndBreak(1, pContext.getPlayer(),
                 player -> player.broadcastBreakEvent(player.getUsedItemHand()));
 
-        return super.useOn(pContext);
+        return InteractionResult.SUCCESS;
     }
 }
