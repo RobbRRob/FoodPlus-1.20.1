@@ -21,9 +21,11 @@ public class ModCreativeModeTab {
                         // Food
                         pOutput.accept(ModItems.ONION.get());
                         pOutput.accept(ModItems.DRAGON_FRUIT.get());
+                        pOutput.accept(ModItems.BANANA.get());
 
                         // Ingredients
                         pOutput.accept(ModItems.SUNFLOWER_OIL.get());
+                        pOutput.accept(ModItems.COCONUT.get());
 
                         // Utility blocks
                         pOutput.accept(ModBlocks.PLOW.get());

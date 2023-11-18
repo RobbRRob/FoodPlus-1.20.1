@@ -6,6 +6,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.robin.foodplus.FoodPlus;
+import net.robin.foodplus.item.custon.CoconutItem;
 import net.robin.foodplus.item.custon.SickleItem;
 
 public class ModItems {
@@ -17,10 +18,14 @@ public class ModItems {
             () -> new Item(new Item.Properties().food(ModFoods.ONION)));
     public static final RegistryObject<Item> DRAGON_FRUIT = ITEMS.register("dragon_fruit",
             () -> new Item(new Item.Properties().food(ModFoods.DRAGON_FRUIT)));
+    public static final RegistryObject<Item> BANANA = ITEMS.register("banana",
+            () -> new Item(new Item.Properties().food(ModFoods.BANANA)));
 
     // Ingredient
     public static final RegistryObject<Item> SUNFLOWER_OIL = ITEMS.register("sunflower_oil",
             () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> COCONUT = ITEMS.register("coconut",
+            () -> new CoconutItem(new Item.Properties().stacksTo(16)));
 
     // Tools
     public static final RegistryObject<Item> SICKLE = ITEMS.register("sickle",

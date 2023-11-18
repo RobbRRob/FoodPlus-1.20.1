@@ -21,8 +21,10 @@
 - strawberries
 - dragon fruit
 - pineapple
-- coconut
+- coconutProjectileEntity
 - lemon
+- kiwi
+- avocado
 
 #### Mushroom
 
@@ -54,6 +56,9 @@
 - butter
 - chocolate
 - sunflower oil
+
+#### Vegetation
+Cotton
 
 ### Tools
 

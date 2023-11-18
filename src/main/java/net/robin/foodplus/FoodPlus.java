@@ -1,6 +1,8 @@
 package net.robin.foodplus;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -13,6 +15,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.robin.foodplus.block.ModBlocks;
+import net.robin.foodplus.entity.ModEntities;
 import net.robin.foodplus.item.ModCreativeModeTab;
 import net.robin.foodplus.item.ModItems;
 import org.slf4j.Logger;
@@ -33,6 +36,8 @@ public class FoodPlus
         ModItems.register(modEventBus);
 
         ModBlocks.register(modEventBus);
+
+        ModEntities.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -62,7 +67,7 @@ public class FoodPlus
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
+            EntityRenderers.register(ModEntities.COCONUT_PROJECTILE.get(), ThrownItemRenderer::new);
         }
     }
 }

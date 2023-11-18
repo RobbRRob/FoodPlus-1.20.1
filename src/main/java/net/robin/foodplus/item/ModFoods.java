@@ -13,4 +13,8 @@ public class ModFoods {
     public static final FoodProperties DRAGON_FRUIT = new FoodProperties.Builder().nutrition(4)
             .saturationMod(7.2f)
             .build();
+
+    public static final FoodProperties BANANA = new FoodProperties.Builder().nutrition(4)
+            .saturationMod(7.2f)
+            .build();
 }
