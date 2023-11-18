@@ -18,6 +18,7 @@ import net.robin.foodplus.block.ModBlocks;
 import net.robin.foodplus.entity.ModEntities;
 import net.robin.foodplus.item.ModCreativeModeTab;
 import net.robin.foodplus.item.ModItems;
+import net.robin.foodplus.loot.ModLootModifiers;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -34,8 +35,9 @@ public class FoodPlus
         ModCreativeModeTab.register(modEventBus);
 
         ModItems.register(modEventBus);
-
         ModBlocks.register(modEventBus);
+
+        ModLootModifiers.register(modEventBus);
 
         ModEntities.register(modEventBus);
 

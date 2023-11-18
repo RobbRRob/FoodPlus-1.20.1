@@ -41,6 +41,7 @@ public class ModItemModelProvider extends ItemModelProvider {
                 new ResourceLocation(FoodPlus.MOD_ID, "item/" + item.getId().getPath()));
     }
 
+    // Get a different sprite for block if in inventory
     private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
