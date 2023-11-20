@@ -6,9 +6,11 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import net.robin.foodplus.block.ModBlocks;
+import net.robin.foodplus.block.custom.CoconutBlock;
 import net.robin.foodplus.entity.ModEntities;
 import net.robin.foodplus.item.ModItems;
 
@@ -35,20 +37,22 @@ public class CoconutProjectileEntity extends ThrowableItemProjectile {
             Entity entity = pResult.getEntity();
             entity.hurt(this.damageSources().thrown(this, this.getOwner()), 10f);
 
-            //this.level().broadcastEntityEvent(this, ((byte) 3));
-            //this.level().setBlock(blockPosition(), ((CoconutBlock) ModBlocks.COCONUT_BLOCK.get()), 3);
+            this.level().broadcastEntityEvent(this, ((byte) 3));
+            this.level().setBlock(blockPosition(), (ModBlocks.COCONUT_BLOCK.get().defaultBlockState()), 3);
         }
 
+        this.discard();
         super.onHitEntity(pResult);
     }
 
     @Override
     protected void onHitBlock(BlockHitResult pResult) {
         if(!this.level().isClientSide()) {
-            //this.level().broadcastEntityEvent(this, ((byte) 3));
-            //this.level().setBlock(blockPosition(), ((CoconutBlock) ModBlocks.COCONUT_BLOCK.get()), 3);
+            this.level().broadcastEntityEvent(this, ((byte) 3));
+            this.level().setBlock(blockPosition(), (ModBlocks.COCONUT_BLOCK.get().defaultBlockState()), 3);
         }
 
+        this.discard();
         super.onHitBlock(pResult);
     }
 }

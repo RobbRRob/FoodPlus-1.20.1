@@ -1,11 +1,13 @@
 package net.robin.foodplus.item;
 
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.robin.foodplus.FoodPlus;
+import net.robin.foodplus.block.ModBlocks;
 import net.robin.foodplus.item.custon.CoconutItem;
 import net.robin.foodplus.item.custon.SickleItem;
 
@@ -15,7 +17,7 @@ public class ModItems {
 
     // Food
     public static final RegistryObject<Item> ONION = ITEMS.register("onion",
-            () -> new Item(new Item.Properties().food(ModFoods.ONION)));
+            () -> new ItemNameBlockItem(ModBlocks.ONION_CROP.get(), new Item.Properties().food(ModFoods.ONION)));
     public static final RegistryObject<Item> DRAGON_FRUIT = ITEMS.register("dragon_fruit",
             () -> new Item(new Item.Properties().food(ModFoods.DRAGON_FRUIT)));
     public static final RegistryObject<Item> BANANA = ITEMS.register("banana",
