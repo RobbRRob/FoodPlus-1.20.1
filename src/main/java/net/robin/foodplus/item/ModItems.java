@@ -18,6 +18,9 @@ public class ModItems {
     // Food
     public static final RegistryObject<Item> ONION = ITEMS.register("onion",
             () -> new ItemNameBlockItem(ModBlocks.ONION_CROP.get(), new Item.Properties().food(ModFoods.ONION)));
+
+    public static final RegistryObject<Item> CORN = ITEMS.register("corn",
+            () -> new ItemNameBlockItem(ModBlocks.CORN_CROP.get(), new Item.Properties().food(ModFoods.CORN)));
     public static final RegistryObject<Item> DRAGON_FRUIT = ITEMS.register("dragon_fruit",
             () -> new Item(new Item.Properties().food(ModFoods.DRAGON_FRUIT)));
     public static final RegistryObject<Item> BANANA = ITEMS.register("banana",
@@ -28,6 +31,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> COCONUT = ITEMS.register("coconut",
             () -> new CoconutItem(new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> RICE = ITEMS.register("rice",
+            () -> new CoconutItem(new Item.Properties()));
 
     // Tools
     public static final RegistryObject<Item> SICKLE = ITEMS.register("sickle",

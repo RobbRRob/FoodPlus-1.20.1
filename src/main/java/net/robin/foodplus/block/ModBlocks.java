@@ -11,6 +11,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.robin.foodplus.FoodPlus;
 import net.robin.foodplus.block.custom.BreweryBlock;
+import net.robin.foodplus.block.custom.CornCropBlock;
 import net.robin.foodplus.block.custom.OnionCropBlock;
 import net.robin.foodplus.item.ModItems;
 
@@ -30,6 +31,9 @@ public class ModBlocks {
     // Crops
     public static final RegistryObject<Block> ONION_CROP = BLOCKS.register("onion_crop",
             () -> new OnionCropBlock(BlockBehaviour.Properties.copy(Blocks.POTATOES).noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> CORN_CROP = BLOCKS.register("corn_crop",
+            () -> new CornCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
 
     // Fruit
     public static final RegistryObject<Block> COCONUT_BLOCK = BLOCKS.register("coconut_block",

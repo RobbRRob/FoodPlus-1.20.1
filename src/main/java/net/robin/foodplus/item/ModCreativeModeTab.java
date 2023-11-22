@@ -20,6 +20,7 @@ public class ModCreativeModeTab {
                     .displayItems((pParameters, pOutput) -> {
                         // Food
                         pOutput.accept(ModItems.ONION.get());
+                        pOutput.accept(ModItems.CORN.get());
                         pOutput.accept(ModItems.DRAGON_FRUIT.get());
                         pOutput.accept(ModItems.BANANA.get());
 

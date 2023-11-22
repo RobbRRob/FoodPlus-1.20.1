@@ -15,6 +15,7 @@ import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePrope
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraftforge.registries.RegistryObject;
 import net.robin.foodplus.block.ModBlocks;
+import net.robin.foodplus.block.custom.CornCropBlock;
 import net.robin.foodplus.block.custom.OnionCropBlock;
 import net.robin.foodplus.item.ModItems;
 
@@ -31,16 +32,27 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.dropOther(ModBlocks.COCONUT_BLOCK.get(), ModItems.COCONUT.get());
 
-        LootItemCondition.Builder lootitemcondition$builder = LootItemBlockStatePropertyCondition
+        LootItemCondition.Builder lootitemcondition$builder1 = LootItemBlockStatePropertyCondition
                 .hasBlockStateProperties(ModBlocks.ONION_CROP.get())
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(OnionCropBlock.AGE, 5));
         this.add(ModBlocks.ONION_CROP.get(), applyExplosionDecay(ModBlocks.ONION_CROP.get(),
                 LootTable.lootTable().withPool(LootPool.lootPool().add(LootItem.lootTableItem(ModItems.ONION.get())))
-                        .withPool(LootPool.lootPool().when(lootitemcondition$builder)
+                        .withPool(LootPool.lootPool().when(lootitemcondition$builder1)
                                 .add(LootItem.lootTableItem(ModItems.ONION.get())
                                         .apply(ApplyBonusCount
                                                 .addBonusBinomialDistributionCount(Enchantments.BLOCK_FORTUNE, 0.5714286F, 3))))
-                        .withPool(LootPool.lootPool().when(lootitemcondition$builder))));
+                        .withPool(LootPool.lootPool().when(lootitemcondition$builder1))));
+
+        LootItemCondition.Builder lootitemcondition$builder2 = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.CORN_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CornCropBlock.AGE, 12));
+        this.add(ModBlocks.CORN_CROP.get(), applyExplosionDecay(ModBlocks.CORN_CROP.get(),
+                LootTable.lootTable().withPool(LootPool.lootPool().add(LootItem.lootTableItem(ModItems.CORN.get())))
+                        .withPool(LootPool.lootPool().when(lootitemcondition$builder2)
+                                .add(LootItem.lootTableItem(ModItems.CORN.get())
+                                        .apply(ApplyBonusCount
+                                                .addBonusBinomialDistributionCount(Enchantments.BLOCK_FORTUNE, 0.723402F, 3))))
+                        .withPool(LootPool.lootPool().when(lootitemcondition$builder2))));
     }
 
     @Override

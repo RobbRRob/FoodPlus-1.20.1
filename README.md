@@ -21,10 +21,11 @@
 - strawberries
 - dragon fruit
 - pineapple
-- coconutProjectileEntity
+- coconut
 - lemon
 - kiwi
 - avocado
+- passion fruit
 
 #### Mushroom
 
@@ -56,9 +57,13 @@
 - butter
 - chocolate
 - sunflower oil
+- vodka
+- beer
+- wine
+- met
 
 #### Vegetation
-Cotton
+- Cotton
 
 ### Tools
 

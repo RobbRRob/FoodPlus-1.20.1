@@ -21,12 +21,14 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         // Food
         simpleItem(ModItems.ONION);
+        simpleItem(ModItems.CORN);
         simpleItem(ModItems.DRAGON_FRUIT);
         simpleItem(ModItems.BANANA);
 
         // Ingredients
         simpleItem(ModItems.SUNFLOWER_OIL);
         simpleItem(ModItems.COCONUT);
+        simpleItem(ModItems.RICE);
 
         // Tools
         simpleItem(ModItems.SICKLE);
