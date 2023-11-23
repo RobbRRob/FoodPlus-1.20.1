@@ -35,6 +35,7 @@ public class CornCropBlock extends CropBlock {
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D),
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D),
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D),
+            Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D),
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D)
     };
 
@@ -55,7 +56,9 @@ public class CornCropBlock extends CropBlock {
                 if(net.minecraftforge.common.ForgeHooks.onCropsGrowPre(pLevel, pPos, pState,
                         pRandom.nextInt((int)(25.0F / growthSpeed) + 1) == 0)) {
                     if(currentAge == FIRST_STAGE_MAX_AGE) {
-                        pLevel.setBlock(pPos.above(1), this.getStateForAge(currentAge + 1), 2);
+                        if(pLevel.getBlockState(pPos.above(1)).is(Blocks.AIR)) {
+                            pLevel.setBlock(pPos.above(1), this.getStateForAge(currentAge + 1), 2);
+                        }
                     } else {
                         pLevel.setBlock(pPos, this.getStateForAge(currentAge + 1), 2);
                     }

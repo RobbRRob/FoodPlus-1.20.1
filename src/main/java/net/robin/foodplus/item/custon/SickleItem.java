@@ -5,6 +5,8 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.robin.foodplus.util.ModTags;
 
@@ -27,6 +29,10 @@ public class SickleItem extends Item {
             }
 
             // state.getBlock().defaultBlockState().setValue();
+            if(state.is(ModTags.Blocks.HARVESTABLE_WITH_SICKLE)) {
+                CropBlock harvestedBlock = (CropBlock) state.getBlock();
+                state.getBlock().destroy(pContext.getLevel(), positionClicked, state);
+            }
 
         }
 
