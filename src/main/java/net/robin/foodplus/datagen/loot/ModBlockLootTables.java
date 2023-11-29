@@ -46,8 +46,12 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         LootItemCondition.Builder lootitemcondition$builder2 = LootItemBlockStatePropertyCondition
                 .hasBlockStateProperties(ModBlocks.CORN_CROP.get())
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CornCropBlock.AGE, 12));
+        LootItemCondition.Builder lootitemcondition$builder3 = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.CORN_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CornCropBlock.AGE, "<8"));
         this.add(ModBlocks.CORN_CROP.get(), applyExplosionDecay(ModBlocks.CORN_CROP.get(),
-                LootTable.lootTable().withPool(LootPool.lootPool().add(LootItem.lootTableItem(ModItems.CORN.get())))
+                LootTable.lootTable().withPool(LootPool.lootPool().when(lootitemcondition$builder3)
+                                .add(LootItem.lootTableItem(ModItems.CORN.get())))
                         .withPool(LootPool.lootPool().when(lootitemcondition$builder2)
                                 .add(LootItem.lootTableItem(ModItems.CORN.get())
                                         .apply(ApplyBonusCount
