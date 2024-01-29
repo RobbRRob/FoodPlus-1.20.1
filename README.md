@@ -11,7 +11,6 @@
 ### Ingredients
 
 #### Fruit
-
 - olives
 - peppers
 - bananas
@@ -28,19 +27,21 @@
 - passion fruit
 
 #### Mushroom
-
 - sulphur shelf
 - lion's mane
 - enoki
 - truffles
+- shiitake
+- morel
+- giant puffball
+- lobster mushrooms
+- maitake
 
 #### Berries
-
 - blueberries
 - grapes
 
 #### Veg
-
 - broccoli
 - onions
 - garlic
@@ -52,30 +53,34 @@
 - Corn
 
 #### product
-
 - butter
 - chocolate
 - sunflower oil
 - vodka
+- whisky
 - beer
 - wine
-- met
+- mead
+- sake
+- soju
+- rum
+- cheese
 
 #### Vegetation
-- Cotton
+- cotton
+- saffron
+- hops
 
 ### Tools
-
 - sickle (more crop drop, right-click harvest)
 - cutlery knife (cut things like diced onions)
 
 ### Blocks
-
 - plow
 - cooking plate
-- brewery (wine, beer, met, vodka)
+- brewery (whisky, vodka)
 - mill (flour, sugar)
-- Fermentation bottle
+- Fermentation bottle (wine, beer, met)
 
 # Program info
 The build up of the mod is achived by following [this guide by Kaupenjoe](https://youtu.be/TPfNvwfgXAU).

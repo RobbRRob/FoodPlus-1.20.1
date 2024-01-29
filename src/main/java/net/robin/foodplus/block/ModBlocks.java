@@ -25,8 +25,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> PLOW = registerBlock("plow",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
+    // Block Entity
     public static final RegistryObject<Block> BREWERY = registerBlock("brewery",
-            () -> new BreweryBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new BreweryBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
     // Crops
     public static final RegistryObject<Block> ONION_CROP = BLOCKS.register("onion_crop",
